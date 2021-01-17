@@ -44,13 +44,15 @@ class J07Parameterized {
 			assertEquals("123", str4.toUpperCase());
 			
 		}
-		
+
 		@ParameterizedTest
-		@CsvSource(value= {"ALI CAN, Ali Can","ALI CAN, ali can", "ALI, ali", "123, 123"})
-		void upperCaseTest2(String s1, String s2)
-		{
-			assertEquals(s1,s2.toUpperCase());
+		@CsvSource(value = {"ALI CAN, Ali Can", "ALI CAN, ali can", "ALI, ali", "123, 123", "A, A", "\"\",\"\""})
+		void upperCaseTest2(String s1, String s2) {
+			assertEquals(s1, s2.toUpperCase());
 		}
 		
+		//Check if two Stringa are containing "a" or not.
+		//Use "ali" and "can" - "sam" and "joe" - "tom" and "sam" - "tom" and "joe"
+		//Use @CsvSource annotation
 
 }
